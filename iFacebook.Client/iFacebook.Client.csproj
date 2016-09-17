@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>21649d65-0354-4dbb-a92a-4cea87f21d5b</ProjectGuid>
+    <ProjectGuid>{21649D65-0354-4DBB-A92A-4CEA87F21D5B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>iFacebook.Client</RootNamespace>
@@ -30,24 +30,69 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auth\AccessToken.cs" />
+    <Compile Include="Auth\AuthType.cs" />
+    <Compile Include="Auth\IAuthOption.cs" />
+    <Compile Include="Auth\IAuthorization.cs" />
+    <Compile Include="Auth\IAuthorizationConfiguration.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Conf\ConfigurationBase.cs" />
+    <Compile Include="Conf\IConfiguration.cs" />
+    <Compile Include="Facebook\IAlbum.cs" />
+    <Compile Include="Facebook\FacebookException.cs" />
+    <Compile Include="Facebook\IAccount.cs" />
+    <Compile Include="Facebook\IAchievedObject.cs" />
+    <Compile Include="Facebook\IAchievement.cs" />
+    <Compile Include="Facebook\IActivity.cs" />
+    <Compile Include="Facebook\IAdmin.cs" />
+    <Compile Include="Facebook\IApplication.cs" />
+    <Compile Include="Facebook\IAttachment.cs" />
+    <Compile Include="Facebook\IAttachmentMedia.cs" />
+    <Compile Include="Facebook\IAttachmentTarget.cs" />
+    <Compile Include="Facebook\ICategory.cs" />
+    <Compile Include="Facebook\IComment.cs" />
+    <Compile Include="Facebook\IConnections.cs" />
+    <Compile Include="Facebook\ICursors.cs" />
+    <Compile Include="Facebook\IFacebookResponse.cs" />
+    <Compile Include="Facebook\IField.cs" />
+    <Compile Include="Facebook\IFields.cs" />
+    <Compile Include="Facebook\IIdNameEntity.cs" />
+    <Compile Include="Facebook\IImage.cs" />
+    <Compile Include="Facebook\ILike.cs" />
+    <Compile Include="Facebook\ILocation.cs" />
+    <Compile Include="Facebook\IMetadata.cs" />
+    <Compile Include="Facebook\IPagableList.cs" />
+    <Compile Include="Facebook\IPaging.cs" />
+    <Compile Include="Facebook\IPlace.cs" />
+    <Compile Include="Facebook\IReaction.cs" />
+    <Compile Include="Facebook\ISummary.cs" />
+    <Compile Include="Facebook\ITag.cs" />
+    <Compile Include="Facebook\PrivacyParameter.cs" />
+    <Compile Include="Facebook\PrivacyType.cs" />
+    <Compile Include="Facebook\ReactionType.cs" />
+    <Compile Include="Facebook\SummaryOrder.cs" />
+    <Compile Include="Internal\Http\HTMLEntity.cs" />
+    <Compile Include="Internal\Http\IHttpClientConfiguration.cs" />
+    <Compile Include="Internal\Http\HttpParameter.cs" />
+    <Compile Include="Internal\Http\IHttpClientWrapperConfiguration.cs" />
+    <Compile Include="Internal\Json\JSONObject.cs" />
+    <Compile Include="Internal\Json\Null.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Logging\LoggerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="api\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -57,5 +102,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
- </Project>
+</Project>
